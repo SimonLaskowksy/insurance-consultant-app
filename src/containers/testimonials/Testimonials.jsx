@@ -32,7 +32,7 @@ const Testimonials = () => {
   }, [])
 
   return (
-    <div className="testimonial bg-primary py-16 md:py-28 px-0 md:px-5 relative z-[3]">
+    <section className="testimonial bg-primary py-16 md:py-28 px-0 md:px-5 relative z-[3]" id='testimonials'>
       <div className="bg-[#003830] w-[400px] h-1/2 z-[2] absolute rounded-bl-[300px]
       rounded-br-[300px] top-0 left-0 before:content-[''] before:absolute
       before:top-0 before:right-[20px] before:w-full before:h-full before:pb-[20px]
@@ -101,7 +101,7 @@ const Testimonials = () => {
           </Swiper>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

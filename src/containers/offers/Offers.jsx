@@ -31,11 +31,11 @@ const Offers = () => {
   }, [])
 
   return (
-    <div className="pt-0 px-0 pb-24 md:pb-[20rem] relative before:content-['']
+    <section className="pt-0 px-0 pb-24 md:pb-[20rem] relative before:content-['']
     before:absolute before:z-[-1] before:w-1/4 before:left-0
     before:top-0 before:bottom-0 before:bg-white after:content-['']
     after:absolute after:z-[-1] after:w-full md:after:w-3/4 after:right-0
-    after:top-0 after:bottom-0 after:bg-primary">
+    after:top-0 after:bottom-0 after:bg-primary" id='offers'>
       <div className='block md:flex flex-row max-w-[1200px] mx-auto pt-0
       md:pt-20 justify-end items-center px-5'>
 
@@ -86,7 +86,7 @@ const Offers = () => {
 
 
       </div>
-    </div>
+    </section>
   )
 }
 

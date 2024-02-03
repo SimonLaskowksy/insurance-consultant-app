@@ -3,16 +3,6 @@ import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
 import logo from '../../assets/logo.svg';
 import './navbar.css';
 
-const Menu = () => (
-  <>
-    <p><a href="#home">Home</a></p>
-    <p><a href="#wgpt3">Whats is GPT3?</a></p>
-    <p><a href="#possibility">Open AI</a></p>
-    <p><a href="#features">Case Studies</a></p>
-    <p><a href="#blog">Library</a></p>
-  </>
-)
-
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
   const [scrollData, setSrollData] = useState({
@@ -20,9 +10,23 @@ const Navbar = () => {
     lastY: 0
   });
   const [showNav, setShowNav] = useState(false);
-
+  const [currentSection, setCurrentSection] = useState('');
+  
   useEffect(() => {
     const handleScroll = () => {
+
+      const sections = document.querySelectorAll('section');
+      let found = false;
+      sections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= 1000 && rect.bottom >= 500 && !found) {
+          setTimeout(() => {
+            setCurrentSection(section.id);
+          }, 100);
+          found = true;
+        }
+      });
+
       setSrollData(prevState => {
         return {
           y: window.scrollY,  
@@ -59,11 +63,13 @@ const Navbar = () => {
 
           <div className="mobile-hide w-1/2 hidden md:flex justify-center">
             <div className="flex flex-row list-none space-x-8">
-              <p className='p-0'><a href="#home" className='transition-all duration-300 ease-in-out text-white opacity-100'>Home</a></p>
-              <p className='p-0'><a href="#home" className='transition-all duration-300 ease-in-out text-white opacity-50 hover:opacity-100'>About</a></p>
-              <p className='p-0'><a href="#homes" className='transition-all duration-300 ease-in-out text-white opacity-50 hover:opacity-100'>Portfolio</a></p>
-              <p className='p-0'><a href="#home" className='transition-all duration-300 ease-in-out text-white opacity-50 hover:opacity-100'>Services</a></p>
-              <p className='p-0'><a href="#home" className='transition-all duration-300 ease-in-out text-white opacity-50 hover:opacity-100'>Contact</a></p>
+              <p className='p-0'><a href="#home" className='transition-all duration-300 ease-in-out text-white' style={{ opacity: currentSection === 'home' ? 1 : 0.5 }}>Home</a></p>
+              <p className='p-0'><a href="#offers" className='transition-all duration-300 ease-in-out text-white' style={{ opacity: currentSection === 'offers' ? 1 : 0.5 }}>Oferta</a></p>
+              <p className='p-0'><a href="#services" className='transition-all duration-300 ease-in-out text-white' style={{ opacity: currentSection === 'services' ? 1 : 0.5 }}>Usługi</a></p>
+              <p className='p-0'><a href="#why" className='transition-all duration-300 ease-in-out text-white' style={{ opacity: currentSection === 'why' ? 1 : 0.5 }}>O mnie</a></p>
+              <p className='p-0'><a href="#testimonials" className='transition-all duration-300 ease-in-out text-white' style={{ opacity: currentSection === 'testimonials' ? 1 : 0.5 }}>Klienci</a></p>
+              <p className='p-0'><a href="#faq" className='transition-all duration-300 ease-in-out text-white' style={{ opacity: currentSection === 'faq' ? 1 : 0.5 }}>Pytania</a></p>
+              <p className='p-0'><a href="#cta" className='transition-all duration-300 ease-in-out text-white' style={{ opacity: currentSection === 'cta' ? 1 : 0.5 }}>Kontakt</a></p>
             </div>
           </div>
 

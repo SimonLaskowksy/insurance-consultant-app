@@ -42,7 +42,7 @@ const FAQ = () => {
   }, [])
 
   return (
-    <div className='py-16 md:py-20 px-0'>
+    <section className='py-16 md:py-20 px-0' id='faq'>
       <div className='max-w-[1200px] mx-auto px-5'>
         <h2 className='text-[2rem] md:text-[2.5rem] leading-[1.3] text-dark
         text-center max-w-[400px] mx-auto !mb-[5.5rem] font-serif font-bold'
@@ -59,7 +59,7 @@ const FAQ = () => {
 
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

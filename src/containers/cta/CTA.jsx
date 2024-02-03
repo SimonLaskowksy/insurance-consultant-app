@@ -16,7 +16,7 @@ const CTA = () => {
 	}, [])
 
   return (
-    <div className='pt-20 pb-[30rem] px-0 relative z-[1] bg-secondary'>
+    <section className='pt-20 pb-[30rem] px-0 relative z-[1] bg-secondary' id='cta'>
         <div className='max-w-[980px] mx-auto px-5 block md:flex flex-row
         justify-between items-center'>
             <div className='mb-12 md:mb-0 w-full md:w-[40%]'
@@ -88,7 +88,7 @@ const CTA = () => {
             </div>
 
         </div>
-    </div>
+    </section>
   )
 }
 

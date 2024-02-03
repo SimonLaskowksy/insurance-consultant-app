@@ -31,7 +31,7 @@ const Why = () => {
   }, [])
 
   return (
-    <div className="pt-16 md:pt-16 pb-16 md:pb-32 relative z-[1]" id="why">
+    <section className="pt-16 md:pt-16 pb-16 md:pb-32 relative z-[1]" id="why">
       <div className="max-w-[1200px] mx-auto px-5 block md:flex flex-row
       justify-between">
         <div className="mb-16 md:mb-0 mx-auto md:mx-0 max-w-[400px] md:max-w-none 
@@ -104,7 +104,7 @@ const Why = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

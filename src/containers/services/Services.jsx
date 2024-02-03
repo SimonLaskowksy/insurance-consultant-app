@@ -34,7 +34,7 @@ const Services = () => {
   }, [])
 
   return (
-    <div className="py-[7rem]" id="services">
+    <section className="py-[7rem]" id="services">
       <div className="max-w-[1000px] w-full mx-auto pt-8 pl-5 pr-5">
       
         <div className='block md:flex flex-row items-center justify-between
@@ -71,7 +71,7 @@ const Services = () => {
         </div>
 
       </div>
-    </div>
+    </section>
   )
 }
 

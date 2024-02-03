@@ -15,7 +15,7 @@ const Header = () => {
   }, [])
 
   return (
-    <div className="pt-[10rem] pb-[7rem] lg:pb-[15rem] px-0 bg-primary relative" id="home">
+    <section className="pt-[10rem] pb-[7rem] lg:pb-[15rem] px-0 bg-primary relative" id="home">
 
       <div className="px-5 lg:px-0 max-w-[calc(1200px-300px)] mx-auto block
       md:flex flex-row items-center justify-center">
@@ -69,7 +69,7 @@ const Header = () => {
       </div>
 
 
-    </div>
+    </section>
 
   )
 }

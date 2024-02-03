@@ -11,3 +11,5 @@
 .testimonial .swiper-pagination span.swiper-pagination-bullet-active{
     @apply bg-secondary opacity-100
 }
+
+html{scroll-behavior: smooth;}
