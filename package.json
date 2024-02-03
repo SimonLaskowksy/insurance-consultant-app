@@ -1,5 +1,6 @@
 {
-  "name": "gpt-3-page",
+  "homepage": "https://simonlaskowksy.github.io/insurance-consultant-app/",
+  "name": "insurance-consultant-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
