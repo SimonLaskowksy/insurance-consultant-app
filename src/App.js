@@ -1,8 +1,7 @@
 import React from 'react'
 
-import { Footer, Blog, Offers, Possibility, WhatGPT3, Header} from './containers';
-import { CTA, Navbar } from './components';
-import './App.css';
+import { Footer, FAQ, Offers, Why, Services, Testimonials, Header, CTA } from './containers';
+import { Navbar } from './components';
 
 const App = () => {
   return (
@@ -10,10 +9,11 @@ const App = () => {
       <Navbar />
       <Header />
       <Offers />
-      <WhatGPT3 />
-      <Possibility />
+      <Services />
+      <Why />
+      <Testimonials />
+      <FAQ />
       <CTA />
-      <Blog />
       <Footer />
     </div>
   )

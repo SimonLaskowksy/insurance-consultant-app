@@ -1,6 +1,9 @@
 import React from 'react';
 import offer_img from '../../assets/img-2-min.jpg';
 import Offer from '../../components/offer/Offer';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import {useEffect} from "react";
 
 const offersData = [
   {
@@ -18,6 +21,15 @@ const offersData = [
 ];
 
 const Offers = () => {
+
+  useEffect(() => {
+    AOS.init({
+      once: true,
+      easing: 'slide',
+      duration: 800,
+    });
+  }, [])
+
   return (
     <div className="pt-0 px-0 pb-24 md:pb-[20rem] relative before:content-['']
     before:absolute before:z-[-1] before:w-1/4 before:left-0
@@ -29,8 +41,9 @@ const Offers = () => {
 
         <div className="w-full md:w-[45%] left-0 relative mb-[6.5rem]
         md:mb-0 md:absolute before:content-[''] before:absolute before:w-3/4
-        before:h-[10.625rem] before:bottom-[5rem] before:-left-6 md:before:left-0
-      before:bg-secondary before:rounded-tr-[100px] before:rounded-br-[100px]">
+        before:h-[10.625rem] before:-bottom-[5rem] before:-left-6 md:before:left-0
+      before:bg-secondary before:rounded-tr-[100px] before:rounded-br-[100px]"
+        data-aos="fade-right" data-aos-delay="0">
           <img src={offer_img} alt="What we offer image" className='w-full
           h-[588px] object-cover object-top'/>
         </div>
@@ -38,20 +51,24 @@ const Offers = () => {
         <div className='w-full md:w-[45%] z-[2] relative'>
           <div>
             <h2 className='text-2xl sm:text-[2rem] md:text[2.5rem] leading-[1/3]
-            text-white mb-8 font-bold font-serif'>
+            text-white mb-8 font-bold font-serif'
+            data-aos="fade-up" data-aos-delay="100">
               Our legal team is highly skilled and well-versed
             </h2>
-            <p className='text-white text-opacity-40 mb-8'>
+            <p className='text-white text-opacity-40 mb-8'
+            data-aos="fade-up" data-aos-delay="200">
               Suspendisse nibh sapien, ultricies ac purus vel, eleifend
               commdo tortor. Nam sed tempor sapien. Interdum et
             </p>
             <ul className='mb-10 grid grid-cols-1 sm:grid-cols-2 gap-2.5 list-none'>
               {offersData.map((item, index) => (
-                <Offer text={item.text} key={item.text + index} />
+                <div data-aos="fade-up" data-aos-delay={index * 100 + 300}>
+                  <Offer text={item.text} key={item.text + index}/>
+                </div>
               ))}
             </ul>
               <div className='block sm:flex text-center items-center space-x-0
-              sm:space-x-[1.875rem]'>
+              sm:space-x-[1.875rem]' data-aos="fade-up" data-aos-delay="700">
                 <a className='mb-t sm:mb-0 text-center w-full sm:w-auto
                 inline-block py-4 px-5 rounded-[30px] bg-secondary text-dark
                 border border-transparent transition-all duration-300 ease-in-out

@@ -1,0 +1,17 @@
+.mobile-show{
+    display: none !important;
+}
+@media(max-width: 768px)
+{
+    .mobile-hide{
+        display: none !important;
+    }
+    .mobile-show{
+        display: flex !important;
+    }
+}
+.mobile-menu{
+    -webkit-transition: 0.5s all cubic-bezier(0.86, 0, 0.07, 1);
+    -moz-transition: 0.5s all cubic-bezier(0.86, 0, 0.07, 1);
+    transition: 0.5s all cubic-bezier(0.86, 0, 0.07, 1);
+}

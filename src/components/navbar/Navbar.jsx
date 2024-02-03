@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
 import logo from '../../assets/logo.svg';
+import './navbar.css';
 
 const Menu = () => (
   <>
@@ -20,7 +21,7 @@ const Navbar = () => {
 
       <div className="w-full absolute z-[7]">
         <div className="flex justify-between items-center flex-row max-w-[1200px] 
-        max-auto pt-8 px-5">
+        mx-auto pt-8 px-5">
           
           <div className="w-1/4">
             <a href="index.html">
@@ -28,7 +29,7 @@ const Navbar = () => {
             </a>
           </div>
 
-          <div className="w-1/2 hidden md:flex justify-center">
+          <div className="mobile-hide w-1/2 hidden md:flex justify-center">
             <div className="flex flex-row list-none space-x-8">
               <p className='p-0'><a href="#home" className='transition-all duration-300 ease-in-out text-white opacity-100'>Home</a></p>
               <p className='p-0'><a href="#home" className='transition-all duration-300 ease-in-out text-white opacity-50 hover:opacity-100'>About</a></p>
@@ -38,38 +39,62 @@ const Navbar = () => {
             </div>
           </div>
 
-          <div className="w-1/4 flex justify-end">
+          <div className="mobile-hide w-1/4 flex justify-end">
             <a href='#' className='transition-all duration-300 ease-in-out 
             text-white hidden md:inline-block py-[0.7rem] px-5 rounded-[30px]
              border border-white border-opacity-25 
             hover:border-white'>Hire Us</a>
           </div>
-
-        </div>
-
-        <div className="hidden">
-          {toggleMenu
-            ? <RiCloseLine color="#fff" size={27} onClick={() => setToggleMenu(false)} />
-            : <RiMenu3Line color="#fff" size={27} onClick={() => setToggleMenu(true)} />}
-          {toggleMenu && (
-          <div className="gpt3__navbar-menu_container scale-up-center">
-            <div className="gpt3__navbar-menu_container-links">
-              <p><a href="#home">Home</a></p>
-              <p><a href="#wgpt3">What is GPT3?</a></p>
-              <p><a href="#possibility">Open AI</a></p>
-              <p><a href="#features">Case Studies</a></p>
-              <p><a href="#blog">Library</a></p>
-            </div>
-            <div className="gpt3__navbar-menu_container-links-sign">
-              <p>Sign in</p>
-              <button type="button">Sign up</button>
-            </div>
+          <div className='mobile-show absolute px-[30px] py-0 flex right-0 z-[9999]'>
+            {toggleMenu
+              ? <RiCloseLine color="#666666" size={27} onClick={() => setToggleMenu(false)} className='cursor-pointer text-[2rem]'/>
+              : <RiMenu3Line color="#fff" size={27} onClick={() => setToggleMenu(true)} className='cursor-pointer text-[2rem]'/>}
           </div>
-          )}
         </div>
+
+        {/* {toggleMenu && ( */}
+        <div className="mobile-menu py-[30px] px-0 fixed bg-white top-0 right-0 w-[380px] z-[9997]
+        h-screen opacity-100"
+        style={toggleMenu ? {
+            transform: 'translate(0)',
+            opacity: '1'
+          } : {
+            transform: 'translate(999px)',
+            opacity: '0'
+          }}>
+          <div className="px-[30px] pt-[10px] pb-[50px] h-[calc(100vh-78px)] overflow-auto">
+            <ul className="list-none p-0 m-0">
+              <li className='p-0 list-none m-0'>
+                <a href="#home" className='no-underline py-[6px] px-0 block text-[#666666] duration-300
+               transition-all ease-in-out hover:text-primary'>Home
+                </a>
+              </li>
+              <li className='p-0 list-none m-0'>
+                <a href="#home" className='no-underline py-[6px] px-0 block text-[#666666] duration-300
+               transition-all ease-in-out hover:text-primary'>About
+                </a>
+              </li>
+              <li className='p-0 list-none m-0'>
+                <a href="#home" className='no-underline py-[6px] px-0 block text-[#666666] duration-300
+               transition-all ease-in-out hover:text-primary'>Portfolio
+                </a>
+              </li>
+              <li className='p-0 list-none m-0'>
+                <a href="#home" className='no-underline py-[6px] px-0 block text-[#666666] duration-300
+               transition-all ease-in-out hover:text-primary'>Services
+                </a>
+              </li>
+              <li className='p-0 list-none m-0'>
+                <a href="#home" className='no-underline py-[6px] px-0 block text-[#666666] duration-300
+               transition-all ease-in-out hover:text-primary'>Contact
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        {/* )} */}
 
       </div>
-
     </div>
   )
 }

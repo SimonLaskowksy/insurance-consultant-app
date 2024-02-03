@@ -1,4 +1,7 @@
 export { default as Article } from './article/Article'
 export { default as Offer } from './offer/Offer'
-export { default as CTA } from './cta/CTA'
+export { default as Service } from './service/Service'
+export { default as Reason } from './reason/Reason'
+export { default as Slide } from './slide/Slide'
+export { default as Question } from './question/Question'
 export { default as Navbar } from './navbar/Navbar'
