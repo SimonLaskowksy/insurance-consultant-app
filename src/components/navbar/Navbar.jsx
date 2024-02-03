@@ -35,9 +35,7 @@ const Navbar = () => {
   }, [])
 
   useEffect(() => {
-    console.log(scrollData)
     if(scrollData.y > 500 && scrollData.lastY < scrollData.y && !toggleMenu){
-
       setShowNav(false);
     } else {
       setShowNav(true);

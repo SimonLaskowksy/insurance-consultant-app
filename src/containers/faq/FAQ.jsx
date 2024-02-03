@@ -52,7 +52,7 @@ const FAQ = () => {
         <div className="mb-10 grid grid-cols-1 md:grid-cols-2 gap-10" id="faq">
 
           {questionsData.map(( item, index) => (
-            <div data-aos="fade-up" data-aos-delay={index * 100}>
+            <div data-aos="fade-up" data-aos-delay={index * 100} key={item + index}>
               <Question title={item.title} text={item.text} key={item.title + index}/>
             </div>
           ))}

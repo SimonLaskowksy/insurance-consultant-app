@@ -52,7 +52,7 @@ const Services = () => {
 
           <div className='block sm:flex justify-start md:justify-end'
           data-aos="fade-up" data-aos-delay="200">
-            <a className='mb-t sm:mb-0 text-center w-full sm:w-auto
+            <a className='mb-t text-center w-full sm:w-auto max-[768px]:mb-8 min-[768px]:mb-0
             inline-block py-4 px-5 rounded-[30px] bg-dark text-white
             border border-transparent transition-all duration-300 ease-in-out
            hover:bg-secondary hover:text-dark'>
@@ -64,7 +64,7 @@ const Services = () => {
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8
         md:gap-20'>
           {servicesData.map((item, index) => (
-            <div data-aos="fade-up" data-aos-delay={index * 100}>
+            <div data-aos="fade-up" data-aos-delay={index * 100} key={item + index}>
               <Service title={item.title} text={item.text} imgUrl={item.img} key={item.text + index}/>
             </div>
           ))}

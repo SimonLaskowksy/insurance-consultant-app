@@ -82,7 +82,7 @@ const Why = () => {
 
           <ul className='mb-10 grid grid-cols-1 sm:grid-cols-2 gap-2.5'>
             {reasonsData.map((item, index) => (
-              <div data-aos="fade-up" data-aos-delay={index * 100 + 200}>
+              <div data-aos="fade-up" data-aos-delay={index * 100 + 200} key={item + index}>
                 <Reason text={item.text} key={item.text + index} />
               </div>
             ))}

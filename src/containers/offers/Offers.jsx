@@ -62,7 +62,7 @@ const Offers = () => {
             </p>
             <ul className='mb-10 grid grid-cols-1 sm:grid-cols-2 gap-2.5 list-none'>
               {offersData.map((item, index) => (
-                <div data-aos="fade-up" data-aos-delay={index * 100 + 300}>
+                <div data-aos="fade-up" data-aos-delay={index * 100 + 300} key={item + index}>
                   <Offer text={item.text} key={item.text + index}/>
                 </div>
               ))}
