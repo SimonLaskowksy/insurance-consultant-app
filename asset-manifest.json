@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/insurance-consultant-app/static/css/main.df45f236.css",
-    "main.js": "/insurance-consultant-app/static/js/main.49c553c1.js",
+    "main.css": "/insurance-consultant-app/static/css/main.9dcd71d9.css",
+    "main.js": "/insurance-consultant-app/static/js/main.769d280b.js",
     "static/media/img-2-min.jpg": "/insurance-consultant-app/static/media/img-2-min.47db8127d1abd70bb3b7.jpg",
     "static/media/person-1-min.jpg": "/insurance-consultant-app/static/media/person-1-min.d6f3a30ba8a05ab1cdcf.jpg",
     "static/media/img-1-min.jpg": "/insurance-consultant-app/static/media/img-1-min.c700952a3e64fa6d9fa7.jpg",
@@ -15,11 +15,11 @@
     "index.html": "/insurance-consultant-app/index.html",
     "static/media/star.svg": "/insurance-consultant-app/static/media/star.2b17f3a6f284e0d75cf0.svg",
     "static/media/check.svg": "/insurance-consultant-app/static/media/check.a2e3ae208f2f5fbb8eed.svg",
-    "main.df45f236.css.map": "/insurance-consultant-app/static/css/main.df45f236.css.map",
-    "main.49c553c1.js.map": "/insurance-consultant-app/static/js/main.49c553c1.js.map"
+    "main.9dcd71d9.css.map": "/insurance-consultant-app/static/css/main.9dcd71d9.css.map",
+    "main.769d280b.js.map": "/insurance-consultant-app/static/js/main.769d280b.js.map"
   },
   "entrypoints": [
-    "static/css/main.df45f236.css",
-    "static/js/main.49c553c1.js"
+    "static/css/main.9dcd71d9.css",
+    "static/js/main.769d280b.js"
   ]
 }
