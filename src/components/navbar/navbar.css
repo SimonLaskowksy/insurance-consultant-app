@@ -15,3 +15,6 @@
     -moz-transition: 0.5s all cubic-bezier(0.86, 0, 0.07, 1);
     transition: 0.5s all cubic-bezier(0.86, 0, 0.07, 1);
 }
+.desktop-hide{
+    transform: translateY(-100%);
+}

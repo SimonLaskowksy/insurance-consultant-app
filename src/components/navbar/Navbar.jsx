@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
 import logo from '../../assets/logo.svg';
 import './navbar.css';
@@ -15,13 +15,44 @@ const Menu = () => (
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
+  const [scrollData, setSrollData] = useState({
+    y: 0,
+    lastY: 0
+  });
+  const [showNav, setShowNav] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setSrollData(prevState => {
+        return {
+          y: window.scrollY,  
+          lastY: prevState.y
+        }
+      })
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  useEffect(() => {
+    console.log(scrollData)
+    if(scrollData.y > 500 && scrollData.lastY < scrollData.y){
+
+      setShowNav(false);
+    } else {
+
+      setShowNav(true);
+    }
+
+  }, [scrollData])
 
   return (
     <div className="relative">
 
-      <div className="w-full absolute z-[7]">
+      <div className="w-full top-0 z-[7] fixed bg-primary ease-in-out duration-1000"
+      style={showNav ? {transform: "translateY(0%)"} : {transform: "translateY(-100%)"}}>
         <div className="flex justify-between items-center flex-row max-w-[1200px] 
-        mx-auto pt-8 px-5">
+        mx-auto py-6 px-5">
           
           <div className="w-1/4">
             <a href="index.html">
@@ -51,6 +82,7 @@ const Navbar = () => {
               : <RiMenu3Line color="#fff" size={27} onClick={() => setToggleMenu(true)} className='cursor-pointer text-[2rem]'/>}
           </div>
         </div>
+
 
         {/* {toggleMenu && ( */}
         <div className="mobile-menu py-[30px] px-0 fixed bg-white top-0 right-0 w-[380px] z-[9997]
